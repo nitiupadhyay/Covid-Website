@@ -1,0 +1,61 @@
+<%- include("partials/header") %> 
+<%- include("subbar") %> 
+
+<% posts.forEach(function(post){ %>
+   <% if(post.requirement=="Oxygen Concentrator"){ %>
+    <div style="padding: 2%" class="jumbotron">
+      <div class="row">
+        <div class="col-8">
+          <h2
+            style="font-size: 30px; display: table-cell; vertical-align: middle"
+            class="display-4"
+          >
+            <%=post.name%>
+          </h2>
+        </div>
+        <div class="col-4" >
+          <p style="display: table-cell"><%=post.city%> , <%=post.state%></p>
+        </div>
+      </div>
+      <hr />
+      <p style="font-weight: bold" class="firs">
+        Requirement : <%=post.requirement%> | Covid Test: <%=post.result%>
+      </p>
+      <div class="row">
+        <div class="col-8" style="padding-left: 15px; padding-top: 10px;">
+          
+          <%=post.content%> <br>
+          Contact : <%=post.contact%>
+        </div>
+        <div class="col-4">
+            <p>
+              Age: <%=post.age%>
+              <br />
+              Temperature: <%=post.temperature%>
+              <br />
+              SPO2 Count: <%=post.count%>
+            </p>
+          
+        </div>
+      </div>
+      
+    
+    
+      <br />
+      
+    
+      <p>
+        <a href="tel:<%=post.contact%>"> Call </a>/
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=+91<%=post.contact%>"
+          >Whatsapp</a
+        >
+      </p>
+    </div>
+
+
+    <% } %>
+  
+
+<% }) %> <%- include("partials/footer") %>
