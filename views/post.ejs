@@ -10,11 +10,16 @@
     <label>Age</label>
     <input required class="form-control" type="text" name="age" />
 
-    <label>City</label>
-    <input required id="cityName" class="form-control" type="text" name="city" />
+  
 
     <label>State</label>
-    <input required id="state" class="form-control" type="text" name="state" />
+    <select onchange="print_city('cityName', this.selectedIndex);" id="state" name ="state" class="form-control" required></select>
+
+    <label>City</label>
+    <select id ="cityName" class="form-control" required name="city"></select>
+    <script language="javascript">print_state("state");</script>
+
+  
 
     <label>Temperature</label>
     <input required class="form-control" type="text" name="temperature" />

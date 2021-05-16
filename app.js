@@ -58,6 +58,7 @@ const User = mongoose.model("User", userSchema);
 passport.use(User.createStrategy());
 
 passport.serializeUser(function (user, done) {
+
   done(null, user.id);
 });
 
@@ -160,6 +161,7 @@ app.get("/feed", function (req, res) {
   });
 });
 
+
 app.get("/post", function (req, res) {
   if (req.isAuthenticated()) {
     res.render("post");
@@ -167,6 +169,7 @@ app.get("/post", function (req, res) {
     res.redirect("/login");
   }
 });
+
 
 app.post("/post", function (req, res) {  
       const name=req.body.name;
