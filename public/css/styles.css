@@ -118,7 +118,9 @@
   .jumbotron{
     width: 70%;
   }
-  
+  .login{
+    margin-left: 580px;
+  }
   .navbar-brand{
     display: table-row;
   }
@@ -129,7 +131,9 @@
   .jumbotron{
     width: 50%;
   }
-  
+  .login{
+    margin-left: 1340px;
+  }
   .navbar-brand{
     display: table-row;
   }
